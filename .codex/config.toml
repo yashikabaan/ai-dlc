@@ -1,0 +1,47 @@
+# .codex/config.toml
+# Template only. Do not store secrets or credentials in this file.
+
+[project]
+name = "<project name>"
+default_branch = "<default branch>"
+issue_prefix = "<ticket prefix>"
+
+[context]
+primary_docs = [
+  "AGENTS.md",
+  "docs/product.md",
+  "docs/domain.md",
+  "docs/architecture.md",
+  "docs/constraints.md",
+  "docs/non-functional.md",
+  "docs/workflow.md"
+]
+
+[workflow]
+require_linked_story = true
+require_pr_template = true
+require_doc_check = true
+
+[review]
+minimum_human_approvals = 1
+focus_areas = ["correctness", "risk", "readability", "test impact"]
+
+[reporting]
+daily_update_template = "docs/templates/daily-update-template.md"
+weekly_summary_template = "docs/templates/weekly-summary-template.md"
+
+[ai_roles]
+enabled = [
+  "Product AI",
+  "Planning AI",
+  "Meeting AI",
+  "Code Understanding AI",
+  "Implementation AI",
+  "Review AI",
+  "Documentation AI",
+  "Workflow AI"
+]
+
+# Optional project-specific extensions
+[custom]
+notes = "<optional customization notes>"
